@@ -5,9 +5,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.blueGrey,
       body: Center(
-          child: Text("Hello, World!")
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '0',
+              style: TextStyle(
+                fontSize: 45,
+                fontWeight: FontWeight.bold,
+                color: Colors.white
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
