@@ -4,6 +4,11 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  //1. Create a Value that stores the converted currency value
+  //2. Create a function that multiplies the value give by the textfield with BDT
+  //3. Store the value in the variable that we created
+  //4. Display the variable
+
   @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
@@ -19,6 +24,12 @@ class HomePage extends StatelessWidget {
     );
 //---------------------------------------Page Entry-----------------------------
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Currency Converter',style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.blueGrey,
+        elevation: 0,
+        centerTitle: true,
+      ),
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
