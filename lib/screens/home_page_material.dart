@@ -11,9 +11,13 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
   double result = 0;
   final TextEditingController textEditingController = TextEditingController();
 
+  void convert() {
+    result = double.parse(textEditingController.text) * 114;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    print('ReBuild');
     const border = OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.black,
@@ -42,7 +46,8 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-             '৳$result',
+              maxLines: 1,
+              '৳${result != 0 ? result.toStringAsFixed(2) : result.toStringAsFixed(0)}',
               style: const TextStyle(
                   fontSize: 45,
                   fontWeight: FontWeight.bold,
@@ -76,11 +81,7 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(10),
               child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    result = double.parse(textEditingController.text) * 114;
-                  });
-                },
+                onPressed: convert,
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.black,
                   foregroundColor: Colors.white,
