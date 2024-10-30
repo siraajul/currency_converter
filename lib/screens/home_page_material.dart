@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,25 +14,25 @@ class HomePage extends StatelessWidget {
         strokeAlign: BorderSide.strokeAlignInside,
       ),
       borderRadius: BorderRadius.all(
-        Radius.circular(40),
+        Radius.circular(10),
       ),
     );
 //---------------------------------------Page Entry-----------------------------
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               '0',
               style: TextStyle(
                   fontSize: 45,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+            const Padding(
+              padding: EdgeInsets.all(10),
               child: TextField(
                 style: TextStyle(
                   color: Colors.black,
@@ -53,6 +54,33 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+            //Button
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: ElevatedButton(
+                onPressed: () {
+                  //Debug--Release, Profile
+
+                  // print('Button Clicked');
+                  if (kDebugMode) {
+                    print('Button Clicked');
+                  }
+                },
+                style: ButtonStyle(
+                  backgroundColor: const WidgetStatePropertyAll(Colors.black),
+                  foregroundColor: const WidgetStatePropertyAll(Colors.white),
+                  minimumSize: const WidgetStatePropertyAll(
+                    Size(double.infinity, 50),
+                  ),
+                  shape: WidgetStatePropertyAll(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                child: const Text('Convert'),
+              ),
+            )
           ],
         ),
       ),
