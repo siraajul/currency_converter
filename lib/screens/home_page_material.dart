@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
             //Button
             Padding(
               padding: const EdgeInsets.all(10),
-              child: ElevatedButton(
+              child: TextButton(
                 onPressed: () {
                   //Debug--Release, Profile
 
@@ -66,21 +66,17 @@ class HomePage extends StatelessWidget {
                     print('Button Clicked');
                   }
                 },
-                style: ButtonStyle(
-                  backgroundColor: const WidgetStatePropertyAll(Colors.black),
-                  foregroundColor: const WidgetStatePropertyAll(Colors.white),
-                  minimumSize: const WidgetStatePropertyAll(
-                    Size(double.infinity, 50),
-                  ),
-                  shape: WidgetStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
                 child: const Text('Convert'),
               ),
-            )
+            ),
           ],
         ),
       ),
