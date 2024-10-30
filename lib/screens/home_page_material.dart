@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       ),
     );
 //---------------------------------------Page Entry-----------------------------
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Column(
@@ -30,25 +30,27 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             ),
-            TextField(
-              style: TextStyle(
-                color: Colors.black,
-              ),
-              keyboardType:
-                  TextInputType.numberWithOptions(decimal: true, signed: true),
-
-              decoration: InputDecoration(
-                hintText: 'Enter Your Amount in USD',
-                hintStyle: TextStyle(color: Colors.black),
-                prefixIcon: Icon(
-                  Icons.monetization_on_outlined,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: TextField(
+                style: TextStyle(
                   color: Colors.black,
-                  size: 25,
                 ),
-                filled: true,
-                fillColor: Colors.white,
-                focusedBorder: border,
-                enabledBorder: border,
+                keyboardType: TextInputType.numberWithOptions(
+                    decimal: true, signed: true),
+                decoration: InputDecoration(
+                  hintText: 'Enter Your Amount in USD',
+                  hintStyle: TextStyle(color: Colors.black),
+                  prefixIcon: Icon(
+                    Icons.monetization_on_outlined,
+                    color: Colors.black,
+                    size: 25,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  focusedBorder: border,
+                  enabledBorder: border,
+                ),
               ),
             ),
           ],
