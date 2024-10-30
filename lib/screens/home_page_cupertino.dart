@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageCupertino extends StatefulWidget {
+  const HomePageCupertino({super.key});
 
   @override
-  State<HomePage> createState() => _CurrencyConverterMaterialPageState();
+  State<HomePageCupertino> createState() =>
+      _CurrencyConverterMaterialPageState();
 }
 
-class _CurrencyConverterMaterialPageState extends State<HomePage> {
+class _CurrencyConverterMaterialPageState extends State<HomePageCupertino> {
   double result = 0;
   final TextEditingController textEditingController = TextEditingController();
 
@@ -18,30 +19,19 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    const border = OutlineInputBorder(
-      borderSide: BorderSide(
-        color: Colors.black,
-        width: 2,
-        style: BorderStyle.solid,
-        strokeAlign: BorderSide.strokeAlignInside,
-      ),
-      borderRadius: BorderRadius.all(
-        Radius.circular(10),
-      ),
-    );
+
 //---------------------------------------Page Entry-----------------------------
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
+    return CupertinoPageScaffold(
+      //navigationBar(AppBar)
+      navigationBar: const CupertinoNavigationBar(
+        backgroundColor: CupertinoColors.systemGrey3,
+        middle: Text(
           'Currency Converter',
-          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.blue,
-        elevation: 0,
-        centerTitle: true,
       ),
-      backgroundColor: Colors.blue,
-      body: Center(
+      backgroundColor: CupertinoColors.systemGrey3,
+      //Body Starts From Here
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -51,45 +41,38 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
               style: const TextStyle(
                   fontSize: 45,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  color: CupertinoColors.black),
             ),
             Padding(
               padding: const EdgeInsets.all(10),
-              child: TextField(
+              child: CupertinoTextField(
                 controller: textEditingController,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: CupertinoColors.black,
                 ),
                 keyboardType: const TextInputType.numberWithOptions(
-                    decimal: true, signed: true),
-                decoration: const InputDecoration(
-                  hintText: 'Enter Your Amount in USD',
-                  hintStyle: TextStyle(color: Colors.black),
-                  prefixIcon: Icon(
-                    Icons.monetization_on_outlined,
-                    color: Colors.black,
-                    size: 25,
-                  ),
-                  filled: true,
-                  fillColor: Colors.white,
-                  focusedBorder: border,
-                  enabledBorder: border,
+                  decimal: true,
+                  signed: true,
+                ),
+                decoration: BoxDecoration(
+                  color: CupertinoColors.white,
+                  border: Border.all(),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                placeholder: 'Enter Your Amount in USD',
+                prefix: const Icon(
+                  CupertinoIcons.money_dollar_circle,
+                  color: CupertinoColors.black,
+                  size: 25,
                 ),
               ),
             ),
             //Button------------------------------------------------------------
             Padding(
               padding: const EdgeInsets.all(10),
-              child: TextButton(
+              child: CupertinoButton(
                 onPressed: convert,
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  foregroundColor: Colors.white,
-                  minimumSize: const Size(double.infinity, 50),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
+                color: CupertinoColors.black,
                 child: const Text('Convert'),
               ),
             ),
