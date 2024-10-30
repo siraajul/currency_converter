@@ -17,6 +17,12 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
   }
 
   @override
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
       borderSide: BorderSide(
