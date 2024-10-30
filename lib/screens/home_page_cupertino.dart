@@ -18,8 +18,13 @@ class _CurrencyConverterMaterialPageState extends State<HomePageCupertino> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  void dispose() {
+    textEditingController.dispose();
+    super.dispose();
+  }
 
+  @override
+  Widget build(BuildContext context) {
 //---------------------------------------Page Entry-----------------------------
     return CupertinoPageScaffold(
       //navigationBar(AppBar)
