@@ -11,7 +11,7 @@ A simple Flutter application that converts USD (United States Dollar) to BDT (Ba
 
 ## 📱 Screenshots
 
-<img src="screenshots/AppMockup.png.png" width="200" alt="Currency Converter App Screenshot">
+<img src="screenshots/AppMockup.png" width="200" alt="Currency Converter App Screenshot">
 
 ## 🚀 Getting Started
 
