@@ -11,7 +11,7 @@ A simple Flutter application that converts USD (United States Dollar) to BDT (Ba
 
 ## 📱 Screenshots
 
-<img src="screenshots/app_screenshot.png" width="200" alt="Currency Converter App Screenshot">
+<img src="screenshots/AppMockup.png.png" width="200" alt="Currency Converter App Screenshot">
 
 ## 🚀 Getting Started
 
@@ -25,7 +25,7 @@ A simple Flutter application that converts USD (United States Dollar) to BDT (Ba
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/currency_converter.git
+git clone https://github.com/siraajul/currency_converter.git
 ```
 
 2. Navigate to the project directory:
