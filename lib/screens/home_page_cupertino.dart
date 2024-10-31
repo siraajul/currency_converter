@@ -31,7 +31,7 @@ class _CurrencyConverterMaterialPageState extends State<HomePageCupertino> {
       navigationBar: const CupertinoNavigationBar(
         backgroundColor: CupertinoColors.systemGrey3,
         middle: Text(
-          'Currency Converter',
+          'Freelancer Currency Converter',
         ),
       ),
       backgroundColor: CupertinoColors.systemGrey3,
