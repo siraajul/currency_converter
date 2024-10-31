@@ -39,8 +39,8 @@ class _CurrencyConverterMaterialPageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Currency Converter',
-          style: TextStyle(color: Colors.white),
+          'Freelancer Currency Converter',
+          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blue,
         elevation: 0,
