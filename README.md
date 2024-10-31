@@ -1,16 +1,67 @@
-# currency_converter
+# 💱 Currency Converter App
 
-A new Flutter project.
+A simple Flutter application that converts USD (United States Dollar) to BDT (Bangladeshi Taka). This app provides a clean and user-friendly interface for quick currency conversion. 💫
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- 💵 Convert USD to BDT in real-time
+- 🎯 Clean and intuitive user interface
+- ✅ Input validation for numbers
+- 📊 Displays result with proper formatting
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/app_screenshot.png" width="200" alt="Currency Converter App Screenshot">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+### 📋 Prerequisites
+
+- 📦 Flutter SDK (2.0 or higher)
+- 🎯 Dart SDK (2.12 or higher)
+- 💻 Android Studio or VS Code with Flutter extensions
+
+### ⚙️ Installation
+
+1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/currency_converter.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd currency_converter
+```
+
+3. Install dependencies:
+```bash
+flutter pub get
+```
+
+4. Run the app:
+```bash
+flutter run
+```
+
+## 📖 How to Use
+
+1. 📱 Launch the app
+2. 💲 Enter the amount in USD in the input field
+3. 🔄 Press the "Convert" button
+4. 👀 View the converted amount in BDT
+
+## 🔮 Future Updates
+
+- 🌐 Support for more currencies
+- 📊 Live exchange rate updates
+- 📝 Currency conversion history
+- 🔌 Offline support
+- 🎨 Theme customization
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. ⭐
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 📜
